@@ -1,0 +1,4 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `new_row`(IN IN_title VARCHAR(256), IN IN_author VARCHAR(45), IN IN_publishing_house VARCHAR(256), IN IN_language VARCHAR(45), IN IN_genre VARCHAR(45), IN IN_publication_date DATE, IN IN_price double)
+BEGIN
+INSERT INTO `library`.`book` (`title`, `author_name`, `publishing_house` ,`language` , `genre`, `publication_date`,`price`) VALUES (IN_title, IN_author, IN_publishing_house, IN_language, IN_genre, IN_publication_date, IN_price);
+END
